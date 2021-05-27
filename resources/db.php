@@ -3,7 +3,6 @@ require ('config.php');
 class DbConnection
 {
 
-    private $DB_SERVER = DB_HOST;
     private $DB_USER = DB_USER;
     private $DB_PASSWORD = DB_PASSWORD;
     private $DB_NAME = DB_NAME;
