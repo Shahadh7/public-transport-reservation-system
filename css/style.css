@@ -6,6 +6,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+
 }
 .content-section {
     min-height: 100vh;
@@ -16,7 +17,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(78, 77, 77);
+    background-color: rgb(53, 52, 52);
 }
 
 li {
@@ -33,7 +34,7 @@ li {
 }
 
 .nav-links:hover {
-    background-color: #111;
+    background-color: rgb(42, 42, 42);
 }
 
 
@@ -55,7 +56,55 @@ li {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(78, 77, 77);
+    background-color: rgb(53, 52, 52);
     color: white;
     text-align: center;
+}
+
+#admin-header {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(77, 77, 77);
+}
+
+.login-panel {
+    margin: auto;
+    width: 50%;
+    background-color: rgba(24, 42, 7, 0.356);
+    border-radius: 25px;
+}
+
+
+.login-panel form {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+}
+.login-panel form label{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.login-panel form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.login-panel form input:focus {
+    outline:none;
+}
+.login-panel form button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(63, 177, 68);
+    color: white;
+    border: none;
+}
+
+.login-panel form button:focus {
+    outline:none;
+
 }

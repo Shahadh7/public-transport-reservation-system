@@ -64,6 +64,23 @@ class Db
         return $result;
     }
 
+    public function adminLogin($username,$password){
+        try {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT user_id,type FROM users WHERE type= 'admin' AND username = ? AND password = ?");
+            $SQL->bindParam(1, $username);
+            $SQL->bindParam(2, $password);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return $result;
+    }
+
 }
 
 ?>
