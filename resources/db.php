@@ -1,6 +1,6 @@
 <?php
 require ('config.php');
-class DbConnection
+class Db
 {
 
     private $DB_USER = DB_USER;
@@ -25,6 +25,43 @@ class DbConnection
 
     public function getConnection(){
         return $this->dbConnect();
+    }
+
+
+    public function registerUser($username,$nic,$password) {
+        try {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("INSERT INTO users(username,nic,password)VALUES(?,?,?)");
+            $SQL->bindParam(1, $username);
+            $SQL->bindParam(2, $nic);
+            $SQL->bindParam(3, $password);
+            $SQL->execute();
+            return "Success";
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+            return "Failed";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+            return "Failed";
+        }
+    }
+
+    public function login($username,$password){
+        try {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT username,user_id FROM users WHERE username = ? AND password = ?");
+            $SQL->bindParam(1, $username);
+            $SQL->bindParam(2, $password);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return $result;
     }
 
 }
