@@ -17,3 +17,18 @@ function login() {
     xhr.send(data);
 
 }
+
+function logout() {
+    alert('asd')
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../src/auth/logout.php', true);
+    xhr.onload = function () {
+        // do something to response
+        alert(this.responseText)
+        if(this.responseText) {
+            window.location.replace("index.php");
+        }
+        
+    };
+    xhr.send();
+}

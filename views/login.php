@@ -21,6 +21,6 @@
     <section class="footer-section">
         <?php include '../templates/footer.php' ?>
     </section> 
-    <script src="../js/login.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

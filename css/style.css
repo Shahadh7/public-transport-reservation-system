@@ -24,7 +24,7 @@ li {
     margin-right: 20px;
 }
 
-li a {
+.nav-links {
     display: block;
     color: white;
     text-align: center;
@@ -32,14 +32,22 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.nav-links:hover {
     background-color: #111;
 }
+
 
 #logo {
     margin-left: 20px;
     float: left;
     color: white;
+}
+
+#logo a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 .footer {
