@@ -1,10 +1,12 @@
 
 
-function deleteItem() {
-    alert("Deleted!")
+function deleteItem(id) {
+
+    alert("Deleted!"+id)
 }
 
-function editItem() {
+function editItem(i) {
+    console.log(i)
     alert("edited")
 }
 
@@ -23,8 +25,8 @@ function getAllUsers() {
                 output += "<tr>"+
                 "<td>"+json_array[i].username+"</td>"+
                 "<td>"+json_array[i].nic+"</td>"+
-                "<td>"+"<img"+" src="+"'../images/pencil.png'"+ "alt="+"'edit-icon'"+" class="+"'operation-icons'"+"onclick="+"'editItem()'"+""+" >"+
-                "<img"+" src="+"'../images/delete.png'"+ "alt="+"'delete-icon'"+" class="+"'operation-icons'"+"onclick="+"'deleteItem()'"+""+">"+"</td>"
+                "<td>"+"<img"+" src="+"'../images/pencil.png'"+ "alt="+"'edit-icon'"+" class="+"'operation-icons'"+"onclick="+"'editItem("+`${json_array[i].user_id}`+")'"+""+" >"+
+                "<img"+" src="+"'../images/delete.png'"+ "alt="+"'delete-icon'"+" class="+"'operation-icons'"+"onclick="+"'deleteItem("+`${json_array[i].user_id}`+")'"+""+">"+"</td>"
                 +"</tr>";
             }
 

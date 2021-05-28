@@ -20,6 +20,26 @@
             </div>
             <div class="content-view">
                 <h1> Manage Reservation</h1>
+                <div class="div-container">
+                    <table  class="table-data" id="admin-table-transport">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Travel Date</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Time</th>
+                                <th>No of Seats Reserved</th>
+                                <th>Paid Amount</th>
+                                <th>Travel Type</th>
+                                <th>Vehicle Name</th>
+                                <th>Operations</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservation-table-body">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
         <section class="footer-section">

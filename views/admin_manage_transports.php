@@ -20,7 +20,25 @@
             </div>
             <div class="content-view">
                 <h1> Manage Transport Vehicles</h1>
-                
+                <div class="div-container">
+                    <table  class="table-data" id="admin-table-transport">
+                        <thead>
+                            <tr>
+                                <th>Vehicle Name</th>
+                                <th>Vehicle Type</th>
+                                <th>Location From</th>
+                                <th>Location To</th>
+                                <th>Owner</th>
+                                <th>Seat Count</th>
+                                <th>Number Plate</th>
+                                <th>Operations</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transport-table-body">
+                        </tbody>
+                    </table>
+                    <button class="add-new-btn"> Add New</button>
+                </div>
             </div>
         </section>
         <section class="footer-section">

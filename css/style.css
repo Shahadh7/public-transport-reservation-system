@@ -156,25 +156,25 @@ li {
 }
 
 
-#admin-table-users {
+.table-data {
     border-collapse: collapse;
     width: 100%;
 }
   
-#admin-table-users td, #admin-table-users th {
+.table-data td, .table-data th {
     border: 1px solid rgb(216, 216, 216);
     padding: 8px;
 }
   
-#admin-table-users tr:nth-child(even){
+.table-data tr:nth-child(even){
     background-color: #f2f2f2;
 }
   
-#admin-table-users tr:hover {
+.table-data tr:hover {
     background-color: #ddd;
 }
   
-#admin-table-users th {
+.table-data th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
@@ -202,7 +202,7 @@ li {
 }
 
 
-#user-add-btn {
+.add-new-btn {
     margin-top: 10px;
     margin-left: 10px;
     padding: 10px;
@@ -214,7 +214,7 @@ li {
     border: none;
 }
 
-#user-add-btn:focus {
+.add-new-btn:focus {
     outline:none;
 
 }

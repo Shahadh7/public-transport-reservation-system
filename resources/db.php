@@ -85,7 +85,7 @@ class Db
         try
         {
             $db = $this->dbConnect();
-            $SQL = $db->prepare("SELECT username,nic FROM users WHERE username != 'admin'");
+            $SQL = $db->prepare("SELECT username,nic,user_id FROM users WHERE username != 'admin'");
             $SQL->execute();
             $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
         }catch (PDOException $e) {

@@ -24,7 +24,7 @@
                     <div class="search-div">
                         <input type="search" name="search" id="search-users" placeholder="Search users by name">
                     </div>    
-                    <table id="admin-table-users">
+                    <table class="table-data" id="admin-table-users">
                         <thead>
                             <tr>
                                 <th>Username</th>
@@ -35,7 +35,7 @@
                         <tbody id="users-table-body">
                         </tbody>
                     </table>
-                    <button id="user-add-btn"> Add User</button>
+                    <button class="add-new-btn"> Add User</button>
                 </div>
             </div>
         </section>

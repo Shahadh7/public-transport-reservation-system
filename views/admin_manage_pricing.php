@@ -20,6 +20,20 @@
             </div>
             <div class="content-view">
                 <h1> Manage Pricing</h1>
+                <div class="div-container">
+                    <table  class="table-data" id="admin-table-transport">
+                        <thead>
+                            <tr>
+                                <th>Vehicle Name</th>
+                                <th>Price</th>
+                                <th>Operations</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pricing-table-body">
+                        </tbody>
+                    </table>
+                    <button class="add-new-btn"> Add New</button>
+                </div>
             </div>
         </section>
         <section class="footer-section">
