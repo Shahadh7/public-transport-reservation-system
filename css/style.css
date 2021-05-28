@@ -108,3 +108,36 @@ li {
     outline:none;
 
 }
+
+.admin-content-section {
+    display: flex;
+    min-height: 100vh;
+}
+.side-bar {
+    flex-grow: 1;
+    background-color: rgb(73, 72, 72);
+}
+.content-view {
+    flex-grow: 9;
+}
+
+.side-menu-item {
+    flex-direction: column;
+    color: whitesmoke;
+    text-align: center;
+    align-self: flex-end;
+    font-size: 1.5em;
+    height: 6rem;
+    vertical-align: middle;
+    border-bottom: 1px black solid;
+}
+
+.side-menu-item a {
+    line-height: 3.5;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
