@@ -269,7 +269,18 @@ class Db
     }
 
     public function deletePricing($pricing_id) {
-
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("DELETE FROM pricing WHERE pricing_id = ? ");
+            $SQL->bindParam(1,$pricing_id);
+            $SQL->execute();
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return "succes";
     }
 
     public function addNewPricing($vehicle_id,$price) {
@@ -290,8 +301,20 @@ class Db
         }
     }
 
-    public function updatePricing($pricingId) {
-
+    public function updatePricing($pricingId,$price) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("UPDATE pricing SET price = :price WHERE pricing_id = :pricingId ");
+            $SQL->bindParam(":price",$price);
+            $SQL->bindParam(":pricingId",$pricingId);
+            $SQL->execute();
+            return "updated"; 
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
     }
 
 }

@@ -51,6 +51,21 @@
                     </div>
                 </div>
             </div>
+            <div id="pricing-edit-popup" class="popup-modal">
+                <div class="popup-modal-content">
+                    <span class="close" onclick="closeEditPopup()">&times;</span>
+                    <div class="edit-div">
+                        <h1>Edit Pricing</h1>
+                        <form action="" id="pricing-edit">
+                            <label for="vehicle-name2">Vehicle Name</label>
+                            <input type="text" name="vehicle-name2" id="vehicle-name2" disabled>
+                            <label for="pricing">Price (LKR)</label>
+                            <input type="text" name="pricing2" id="pricing2">
+                            <button type="submit" onclick="updatePricing()">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="footer-section">
             <?php include '../templates/footer.php' ?>
