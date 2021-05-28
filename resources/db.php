@@ -226,6 +226,74 @@ class Db
         }
     }
 
+    public function getAllPricing() {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT pricing.*,vehicle.name
+                      FROM pricing,vehicle
+                      WHERE pricing.vehicle_id = vehicle.vehicle_id
+            ";
+            $SQL = $db->prepare($query);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function getAllVehiclesWithNoPricing() {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT vehicle_id,name
+                      FROM vehicle
+                      WHERE vehicle_id NOT IN (SELECT vehicle_id FROM pricing)
+            ";
+            $SQL = $db->prepare($query);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function deletePricing($pricing_id) {
+
+    }
+
+    public function addNewPricing($vehicle_id,$price) {
+        try {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("INSERT INTO pricing(vehicle_id,price)VALUES(?,?)");
+            $SQL->bindParam(1, $vehicle_id);
+            $SQL->bindParam(2, $price);
+            $SQL->execute();
+            return "Success";
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+            return "Failed";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+            return "Failed";
+        }
+    }
+
+    public function updatePricing($pricingId) {
+
+    }
+
 }
 
 ?>

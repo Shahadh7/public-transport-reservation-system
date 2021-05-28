@@ -10,7 +10,7 @@
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="../css/style.css">
     </head>
-    <body>
+    <body onload="getAllPricing()">
         <section class="header-section">
             <?php include '../templates/admin-header.php' ?>
         </section>
@@ -32,13 +32,30 @@
                         <tbody id="pricing-table-body">
                         </tbody>
                     </table>
-                    <button class="add-new-btn"> Add New</button>
+                    <button class="add-new-btn" onclick="openAddPopUp()"> Add New</button>
+                </div>
+            </div>
+            <div id="pricing-add-popup" class="popup-modal">
+                <div class="popup-modal-content">
+                    <span class="close" onclick="closeAddPopup()">&times;</span>
+                    <div class="edit-div">
+                        <h1>Add Pricing</h1>
+                        <form action="" id="pricing-add">
+                            <label for="vehicle-name">Vehicle Name</label>
+                            <select name="vehicle-name" id="vehicle-name">
+                            </select>
+                            <label for="pricing">Price (LKR)</label>
+                            <input type="text" name="pricing" id="pricing">
+                            <button type="submit" onclick="addPricing()">Add</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="footer-section">
             <?php include '../templates/footer.php' ?>
-        </section> 
+        </section>
+        <script src="../js/manage-pricing.js"></script> 
     </body>
 </html>
 

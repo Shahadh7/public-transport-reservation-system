@@ -140,7 +140,7 @@
         <section class="footer-section">
             <?php include '../templates/footer.php' ?>
         </section> 
-        <script src="../js/manage-transport-vehciles.js"></script>
+        <script src="../js/manage-transport-vehicles.js"></script>
     </body>
 </html>
 
