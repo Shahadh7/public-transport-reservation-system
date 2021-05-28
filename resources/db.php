@@ -98,6 +98,56 @@ class Db
         return $result;
     }
 
+    public function deleteUser($user_id) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("DELETE FROM users WHERE user_id = ? ");
+            $SQL->bindParam(1,$user_id);
+            $SQL->execute();
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return "succes";
+    }
+
+    public function searchUser($text) {
+        try{
+            $searchText = "%".$text."%";
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT username,nic,user_id FROM users WHERE username LIKE ? ");
+            $SQL->bindParam(1,$searchText);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return $result;
+    }
+
+    public function updateUser($userId,$username,$nic)
+    {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("UPDATE users SET username = :username , nic = :nic WHERE user_id = :userId ");
+            $SQL->bindParam(":username",$username);
+            $SQL->bindParam(":nic",$nic);
+            $SQL->bindParam(":userId",$userId);
+            $SQL->execute();
+            return "updated"; 
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
 }
 
 ?>

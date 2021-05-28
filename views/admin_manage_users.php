@@ -22,7 +22,7 @@
                 <h1> Manage Users</h1>
                 <div class="div-container">
                     <div class="search-div">
-                        <input type="search" name="search" id="search-users" placeholder="Search users by name">
+                        <input type="search" name="search" id="search-users" placeholder="Search users by name" onkeyup="searchUser()">
                     </div>    
                     <table class="table-data" id="admin-table-users">
                         <thead>
@@ -35,7 +35,21 @@
                         <tbody id="users-table-body">
                         </tbody>
                     </table>
-                    <button class="add-new-btn"> Add User</button>
+                </div>
+            </div>
+            <div id="user-edit-popup" class="popup-modal">
+                <div class="popup-modal-content">
+                    <span class="close" onclick="closePopup()">&times;</span>
+                    <div class="edit-div">
+                        <h1>Edit User</h1>
+                        <form action="" id="users-edit">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                            <label for="user-nic">NIC</label>
+                            <input type="text" name="user-nic" id="user-nic">
+                            <button type="submit" onclick="updateEditedValues()">Update</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
