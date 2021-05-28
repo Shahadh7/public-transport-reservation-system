@@ -13,6 +13,7 @@ function login() {
         // do something to response
         console.log(this.responseText);
         alert(this.responseText)
+        window.location.replace("/");
     };
     xhr.send(data);
 
