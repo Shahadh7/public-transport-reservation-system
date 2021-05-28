@@ -81,6 +81,23 @@ class Db
         return $result;
     }
 
+    public function getUsers() {
+        try
+        {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT username,nic FROM users");
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
 }
 
 ?>

@@ -1,7 +1,7 @@
 html {
     padding: 0;
     margin: 0;
-
+    font-family: 'Dosis', sans-serif;
 }
 body {
     padding: 0;
@@ -140,4 +140,64 @@ li {
     text-decoration: none;
 }
 
+.content-view  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(77, 77, 77);
+    width: 50rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.div-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+
+#admin-table-users {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#admin-table-users td, #admin-table-users th {
+    border: 1px solid rgb(216, 216, 216);
+    padding: 8px;
+}
+  
+#admin-table-users tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+  
+#admin-table-users tr:hover {
+    background-color: #ddd;
+}
+  
+#admin-table-users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #269735;
+    color: white;
+}
+
+.operation-icons {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-div {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+#search-users {
+    float: left;
+    width: 12rem;
+    height: 2rem;
+    text-align: center;
+}
 

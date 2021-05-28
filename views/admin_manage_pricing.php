@@ -19,6 +19,7 @@
             <?php include '../templates/side-bar.php' ?>
             </div>
             <div class="content-view">
+                <h1> Manage Pricing</h1>
             </div>
         </section>
         <section class="footer-section">
