@@ -33,17 +33,9 @@
                             </tr>
                         </thead>
                         <tbody id="users-table-body">
-                            <!-- <tr>
-                                <td>Shahadh</td>
-                                <td>941162304V</td>
-                                <td>
-                                    <img src="../images/pencil.png" alt="edit-icon" class="operation-icons" >
-                                    <img src="../images/delete.png" alt="trash-icon" class="operation-icons" onclick="deleteItem()">
-                                </td>
-                            </tr> -->
                         </tbody>
-                        
                     </table>
+                    <button id="user-add-btn"> Add User</button>
                 </div>
             </div>
         </section>
