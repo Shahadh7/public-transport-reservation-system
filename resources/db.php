@@ -148,6 +148,84 @@ class Db
         }
     }
 
+    public function getAllTransportVehicles() {
+        try
+        {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT * FROM vehicle");
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function deleteVehicle($vehicle_id) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("DELETE FROM vehicle WHERE vehicle_id = ? ");
+            $SQL->bindParam(1,$vehicle_id);
+            $SQL->execute();
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return "succes";
+    }
+
+    public function updateVehicle($vehicleId,$name,$type,$locationFrom,$locationTo,$owner,$seatCount,$numPlate)
+    {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("UPDATE vehicle SET name = :name , type = :type , location_from = :locationFrom , location_to = :locationTo , owner = :owner , seat_count = :seatCount , number_plate = :numPlate   WHERE vehicle_id = :vehicleId ");
+            $SQL->bindParam(":name",$name);
+            $SQL->bindParam(":type",$type);
+            $SQL->bindParam(":locationFrom",$locationFrom);
+            $SQL->bindParam(":locationTo",$locationTo);
+            $SQL->bindParam(":owner",$owner);
+            $SQL->bindParam(":seatCount",$seatCount);
+            $SQL->bindParam(":numPlate",$numPlate);
+            $SQL->bindParam(":vehicleId",$vehicleId);
+            $SQL->execute();
+            return "updated"; 
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function addVehicle($name,$type,$locationFrom,$locationTo,$owner,$seatCount,$numPlate) {
+        try {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("INSERT INTO vehicle(name,type,location_from,location_to,owner,seat_count,number_plate)VALUES(?,?,?,?,?,?,?)");
+            $SQL->bindParam(1, $name);
+            $SQL->bindParam(2, $type);
+            $SQL->bindParam(3, $locationFrom);
+            $SQL->bindParam(4, $locationTo);
+            $SQL->bindParam(5, $owner);
+            $SQL->bindParam(6, $seatCount);
+            $SQL->bindParam(7, $numPlate);
+            $SQL->execute();
+            return "Success";
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+            return "Failed";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+            return "Failed";
+        }
+    }
+
 }
 
 ?>

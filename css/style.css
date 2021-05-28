@@ -271,7 +271,7 @@ li {
 }
 .edit-div form label{
     color: rgb(37, 37, 37);
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 5px;
 }
 .edit-div form input {
@@ -297,4 +297,15 @@ li {
 .edit-div form button:focus {
     outline:none;
 
+}
+
+.edit-div form select {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+}
+.edit-div form select:focus {
+    outline:none;
 }
