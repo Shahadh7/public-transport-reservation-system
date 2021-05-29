@@ -419,6 +419,24 @@ class Db
         return "succes";
     }
 
+    public function submitContactForm($name,$email,$message) {
+        try {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("INSERT INTO message(name,email,message)VALUES(?,?,?)");
+            $SQL->bindParam(1, $name);
+            $SQL->bindParam(2, $email);
+            $SQL->bindParam(3, $message);
+            $SQL->execute();
+            return "success";
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+            return "failed";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+            return "failed";
+        }
+    }
 }
 
 ?>
