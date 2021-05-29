@@ -13,10 +13,7 @@
         <?php include '../templates/admin-header.php' ?>
     </section>
     <section class="content-section">
-        <?php 
-            echo $_SESSION['type'];
-        ?>
-        <h1 id="admin-header">Admin Login</h1>
+        <h1 class="main-header">Admin Login</h1>
         <div class="login-panel">
             <form action="" method="post">
                 <label for="admin-username">Username</label>

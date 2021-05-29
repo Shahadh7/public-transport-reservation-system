@@ -59,7 +59,7 @@ li {
     text-align: center;
 }
 
-#admin-header {
+.main-header {
     text-align: center;
     font-size: 3rem;
     color: rgb(77, 77, 77);
@@ -329,4 +329,94 @@ li {
     padding: 2px 16px;
     text-align: center;
     color: rgb(95, 95, 95);
+}
+
+.pricing-container {
+    margin: auto;
+    margin-top: 3rem;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pricing-card h2 {
+    color: rgb(50, 81, 144);
+}
+
+.pricing-card h3 {
+    color: rgb(61, 61, 61);
+}
+
+.pricing-card p {
+    color: rgb(124, 124, 124);
+}
+
+.user-login {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#image-div img {
+    height: 900px;
+    width: 1100px;
+}
+
+#login-div {
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.login-form {
+    background-color: rgba(93, 93, 93, 0.048);
+    margin-top: 10rem;
+    border-radius: 20px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.login-form form label{
+    color: rgb(131, 131, 131);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.login-form form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.login-form form input:focus {
+    outline:none;
+}
+.login-form form button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(32, 151, 72);
+    color: white;
+    border: none;
+}
+
+.login-form form button:focus {
+    outline:none;
+
 }

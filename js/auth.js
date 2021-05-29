@@ -1,5 +1,5 @@
 function login() {
-
+    event.preventDefault()
     username = document.getElementById('username').value
     password = document.getElementById('password').value
 
@@ -10,10 +10,13 @@ function login() {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '../../src/auth/login.php', true);
     xhr.onload = function () {
-        // do something to response
-        console.log(this.responseText);
-        alert(this.responseText)
-        window.location.replace("/");
+        console.log(this.responseText)
+        if(this.responseText == '"invalid username or password"') {
+            alert("Invalid username or password!");
+        }else if(this.responseText == '"success"') {
+            window.location.replace("/");
+        }
+        
     };
     xhr.send(data);
 
@@ -23,9 +26,7 @@ function logout() {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '../../src/auth/logout.php', true);
     xhr.onload = function () {
-        // do something to response
-        alert(this.responseText)
-        if(this.responseText) {
+        if(this.responseText == '"successfully logout"') {
             window.location.replace("/");
         }
         
@@ -45,10 +46,11 @@ function adminLogin() {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '../../src/auth/login.php', true);
     xhr.onload = function () {
-        // do something to response
-        console.log(this.responseText);
-        alert(this.responseText)
-        window.location.replace("admin.php");
+        if(this.responseText == '"invalid username or password"') {
+            alert("Invalid username or password!");
+        }else if(this.responseText == '"success!"') {
+            window.location.replace("admin.php");
+        }
     };
     xhr.send(data);
 }

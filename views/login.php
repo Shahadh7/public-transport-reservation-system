@@ -12,11 +12,26 @@
             <?php include '../templates/header.php' ?>
         </section>
         <section class="content-section">
-            <form action="" method="post">
-                <input type="text" name="username" id="username">
-                <input type="text" name="password" id="password">
-                <button type="submit" onclick="login()">login</button>
-            </form>
+        <h1 class="main-header">Login</h1>
+            <div class="user-login">
+                <div id="image-div">
+                    <img src="../images/tranport-vector.jpg" alt="tranport-vector-image">
+                </div>
+                <div id="login-div">
+                    <div class="login-form">
+                        <form action="" method="post">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                            <div style=" display:flex;">
+                                <button type="submit" onclick="login()" style=" margin-right:20px;">login</button>
+                                <p><a href="../views/register.php">Don't have an account? Get Started</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="footer-section">
             <?php include '../templates/footer.php' ?>

@@ -365,6 +365,60 @@ class Db
         return $data;
     }
 
+
+    public function getAllPricingInfo() {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT vehicle.name, vehicle.location_from, vehicle.location_to, vehicle.type, pricing.price 
+                      FROM vehicle,pricing
+                      WHERE vehicle.vehicle_id = pricing.vehicle_id";
+            $SQL = $db->prepare($query);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function listAllMessages() {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT * FROM message";
+            $SQL = $db->prepare($query);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function deleteMessage($id) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("DELETE FROM message WHERE message_id = ? ");
+            $SQL->bindParam(1,$id);
+            $SQL->execute();
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return "succes";
+    }
+
 }
 
 ?>
