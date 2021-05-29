@@ -29,7 +29,9 @@
             foreach($result as $value){
         
                 $user_id = $value['user_id'];
+                $username = $value['username'];
                 $_SESSION['user_id'] = $user_id;
+                $_SESSION['username'] = $username;
                 
             }
             echo json_encode("success");

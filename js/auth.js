@@ -1,3 +1,29 @@
+function signup() {
+    event.preventDefault()
+
+    var username = document.getElementById('username').value;
+    var nic = document.getElementById('nic').value;;
+    var password = document.getElementById('password').value;
+
+    var data = new FormData();
+    data.append('username', username);
+    data.append('nic', nic);
+    data.append('password', password);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../src/auth/signup.php', true);
+    xhr.onload = function () {
+        console.log(this.responseText)
+        if(this.responseText == '"Success"') {
+            alert("successfully registered!")
+            window.location.replace("../views/login.php");
+        }
+        
+    };
+    xhr.send(data);
+
+}
+
 function login() {
     event.preventDefault()
     username = document.getElementById('username').value

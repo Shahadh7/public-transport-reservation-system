@@ -420,3 +420,50 @@ li {
     outline:none;
 
 }
+
+#signup-div {
+    width: 40%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.signup-form {
+    background-color: rgba(93, 93, 93, 0.048);
+    border-radius: 20px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.signup-form form label{
+    color: rgb(131, 131, 131);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.signup-form form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.signup-form form input:focus {
+    outline:none;
+}
+.signup-form form button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(32, 151, 72);
+    color: white;
+    border: none;
+}
+
+.signup-form form button:focus {
+    outline:none;
+
+}
