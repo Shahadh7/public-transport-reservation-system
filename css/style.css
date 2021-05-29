@@ -445,7 +445,7 @@ li {
     margin-bottom: 5px;
 }
 .signup-form form input {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     padding: 15px;
     border-radius: 5px;
     border: none;
@@ -466,4 +466,8 @@ li {
 .signup-form form button:focus {
     outline:none;
 
+}
+
+.error-text {
+    color: red;
 }

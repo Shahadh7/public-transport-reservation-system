@@ -13,16 +13,19 @@
         <?php include '../templates/header.php' ?>
     </section>
     <section class="content-section">
-        <h1 class="main-header">Sign up</h1>
+        <h1 class="main-header">Create A New Account</h1>
         <div id="signup-div">
             <div class="signup-form">
                 <form action="" method="post">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" onkeyup="usernameVal()">
+                    <span id="username-error" class="error-text"></span>
                     <label for="nic">NIC</label>
-                    <input type="text" name="nic" id="nic">
+                    <input type="text" name="nic" id="nic" onkeyup="nicVal()">
+                    <span id="nic-error" class="error-text"></span>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" onkeyup="passVal()">
+                    <span id="password-error" class="error-text"></span>
                     <button type="submit" onclick="signup()" style=" margin-right:20px;">Sign up</button>
                     
                 </form>
