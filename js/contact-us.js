@@ -96,6 +96,10 @@ function messageValidation() {
         document.getElementById("message-error").innerHTML = "Message must be atleast 10 characters!"
         return;
     }
+    if(text.length > 255) {
+        document.getElementById("message-error").innerHTML = "Maximum character limit exceeded!"
+        return;
+    }
     if(text.length > 0){
         document.getElementById("message-error").innerHTML = ""
         return;
