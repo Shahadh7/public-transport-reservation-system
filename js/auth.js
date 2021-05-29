@@ -86,7 +86,10 @@ function passVal() {
         document.getElementById("password-error").innerHTML = ""
     }else if (text.length == 0) {
         document.getElementById("password-error").innerHTML = "Password cannot be empty!"
-    } 
+    }
+    if(text.length < 6) {
+        document.getElementById("password-error").innerHTML = "Password must be atleat 6 characters!"
+    }
 }
 
 function login() {
