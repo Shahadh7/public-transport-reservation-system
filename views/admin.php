@@ -10,7 +10,7 @@
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="../css/style.css">
     </head>
-    <body>
+    <body onload="getCounts()">
         <section class="header-section">
             <?php include '../templates/admin-header.php' ?>
         </section>
@@ -19,12 +19,33 @@
             <?php include '../templates/side-bar.php' ?>
             </div>
             <div class="content-view">
-                <h1> Hello Admin</h1>
+                <h1> Hello! Welcome Admin</h1>
+                <div class="admin-statistics">
+                    <div class="stat-card">
+                        <div class="card-container">
+                            <h2><b>Total Registered Users</b></h2> 
+                            <p id="users-count"></p> 
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="card-container">
+                            <h2><b>Total Reservations</b></h2> 
+                            <p id="reserve-count"></p> 
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="card-container">
+                            <h2><b>Total Registered Vehicles</b></h2> 
+                            <p id="vehicle-count"></p> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="footer-section">
             <?php include '../templates/footer.php' ?>
-        </section> 
+        </section>
+        <script src="../js/admin.js"></script> 
     </body>
 </html>
 

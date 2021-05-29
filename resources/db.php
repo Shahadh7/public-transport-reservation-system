@@ -317,6 +317,54 @@ class Db
         }
     }
 
+    public function getCounts() {
+        try
+        {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT COUNT(user_id) as users_count FROM users");
+            $SQL->execute();
+            $result1 = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        };
+
+        try
+        {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT COUNT(reservation_id) as reserve_count FROM reservation");
+            $SQL->execute();
+            $result2 = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        };
+
+        try
+        {
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("SELECT COUNT(vehicle_id) as vehicle_count FROM vehicle");
+            $SQL->execute();
+            $result3 = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        };
+
+        $data = [
+            "user_count" => $result1[0],
+            "reserve_count" => $result2[0],
+            "vehicle_count" => $result3[0],
+        ];
+        return $data;
+    }
+
 }
 
 ?>

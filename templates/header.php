@@ -8,7 +8,6 @@
     <?php }?>
     <li><a href="../views/contact-us.php" class="nav-links">Contact Us</a></li>
     <li><a href="../views/pricing.php" class="nav-links">Pricing</a></li>
-    <li><a href="../views/about-us.php" class="nav-links">About Us</a></li>
     <?php if (!isset($_SESSION['user_id'])) {?>
         <li><a href="../views/login.php" class="nav-links">Login</a></li>
         <li><a href="../views/register.php" class="nav-links">Register</a></li>
