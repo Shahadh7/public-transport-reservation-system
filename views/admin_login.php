@@ -8,7 +8,7 @@
     <title>Admin Login</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="bg6">
     <section class="header-section">
         <?php include '../templates/admin-header.php' ?>
     </section>

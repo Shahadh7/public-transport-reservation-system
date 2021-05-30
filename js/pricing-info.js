@@ -11,10 +11,10 @@ function getaAllPricingInfo() {
 
             for(var i in json_array) {
                 output += "<div class='pricing-card'"+">"+
-                                "<h2>"+`${json_array[i].name}`+"</h2>"+
+                                "<h2 >"+`${json_array[i].name}`+"</h2>"+
                                 "<h3>"+`${json_array[i].type}`+"</h3>"+
-                                "<p>"+`LKR ${json_array[i].price}`+"</p>"+
-                                "<p>"+`${json_array[i].location_from} - ${json_array[i].location_to}`+"</p>"+ "</div>"
+                                "<p class='p-bg'><span>"+`LKR ${json_array[i].price}`+"<span></p>"+
+                                "<p class='p-bg'><span>"+`${json_array[i].location_from} - ${json_array[i].location_to}`+"<span></p>"+ "</div>"
                                 ;              
             }
             document.getElementById("pricing-container").innerHTML = output;  

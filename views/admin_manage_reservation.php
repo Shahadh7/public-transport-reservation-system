@@ -10,7 +10,7 @@
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="../css/style.css">
     </head>
-    <body>
+    <body onload="getAllReservations()" class="bg8">
         <section class="header-section">
             <?php include '../templates/admin-header.php' ?>
         </section>
@@ -45,6 +45,7 @@
         <section class="footer-section">
             <?php include '../templates/footer.php' ?>
         </section> 
+        <script src="../js/manage-reservation.js"></script>
     </body>
 </html>
 

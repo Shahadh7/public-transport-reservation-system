@@ -8,7 +8,7 @@
     <title>Pricing</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body onload="getaAllPricingInfo()">
+<body onload="getaAllPricingInfo()" class="bg2">
     <section class="header-section">
         <?php include '../templates/header.php' ?>
     </section>

@@ -437,6 +437,44 @@ class Db
             return "failed";
         }
     }
+
+    public function getAllReservations() {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT reservation.*,users.user_id,users.username,vehicle.*  
+                      FROM reservation,vehicle,vehicle_reserve,users
+                      WHERE reservation.user_id = users.user_id AND 
+                            vehicle.vehicle_id = vehicle_reserve.vehicle_id AND
+                            reservation.reservation_id = vehicle_reserve.reservation_id";
+
+            $SQL = $db->prepare($query);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function deleteReservation($reservation_id) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("DELETE FROM reservation WHERE reservation_id = ?");
+            $SQL->bindParam(1,$reservation_id);
+            $SQL->execute();
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+        return "succes";
+    }
 }
 
 ?>

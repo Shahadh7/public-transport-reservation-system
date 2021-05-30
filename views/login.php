@@ -7,29 +7,24 @@
         <title>Document</title>
         <link rel="stylesheet" href="../css/style.css">
     </head>
-    <body>
+    <body class="bg7">
         <section class="header-section">
             <?php include '../templates/header.php' ?>
         </section>
         <section class="content-section">
         <h1 class="main-header">Login</h1>
             <div class="user-login">
-                <div id="image-div">
-                    <img src="../images/tranport-vector.jpg" alt="tranport-vector-image">
-                </div>
-                <div id="login-div">
-                    <div class="login-form">
-                        <form action="" method="post">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" id="username">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
-                            <div style=" display:flex;">
-                                <button type="submit" onclick="login()" style=" margin-right:20px;">login</button>
-                                <p><a href="../views/register.php">Don't have an account? Get Started</a></p>
-                            </div>
-                        </form>
-                    </div>
+                <div class="login-form">
+                    <form action="" method="post">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                        <div style=" display:flex;">
+                            <button type="submit" onclick="login()" style=" margin-right:20px;">login</button>
+                            <p><a class="have-acc" href="../views/register.php">Don't have an account? Get Started</a></p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

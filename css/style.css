@@ -8,6 +8,7 @@ body {
 }
 .content-section {
     min-height: 100vh;
+    margin-bottom: 4rem;
 }
 
 ul {
@@ -15,7 +16,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(53, 52, 52);
+    background-color: rgba(0, 0, 0, 0.692);
 }
 
 li {
@@ -27,7 +28,8 @@ li {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    font-size: 1.3rem;
+    padding: 21px 16px;
     text-decoration: none;
 }
 
@@ -44,31 +46,40 @@ li {
 
 #logo a {
     display: block;
+    font-size: 1.3rem;
     color: white;
+    padding: 0;
     text-align: center;
     text-decoration: none;
 }
 
+.row-data {
+    color: white;
+}
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(53, 52, 52);
+    background-color: rgba(0, 0, 0, 0.692);
     color: white;
     text-align: center;
 }
 
 .main-header {
     text-align: center;
-    font-size: 3rem;
-    color: rgb(77, 77, 77);
+    font-size: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #464444;
 }
 
 .login-panel {
     margin: auto;
     width: 50%;
-    background-color: rgba(24, 42, 7, 0.356);
+    background-color: rgba(255, 255, 255, 0.356);
     border-radius: 25px;
 }
 
@@ -113,7 +124,7 @@ li {
 }
 .side-bar {
     flex-grow: 1;
-    background-color: rgb(73, 72, 72);
+    background-color: rgba(0, 0, 0, 0.603);
 }
 .content-view {
     flex-grow: 9;
@@ -130,6 +141,10 @@ li {
     border-bottom: 1px black solid;
 }
 
+.side-menu-item:hover {
+    background-color: rgb(53, 53, 53);
+}
+
 .side-menu-item a {
     line-height: 3.5;
     display: block;
@@ -141,7 +156,7 @@ li {
 .content-view  h1 {
     font-size: 2rem;
     text-align: center;
-    color: rgb(77, 77, 77);
+    color: rgb(248, 248, 248);
     width: 50rem;
     margin: auto;
     margin-top: 2rem;
@@ -160,23 +175,27 @@ li {
 }
   
 .table-data td, .table-data th {
-    border: 1px solid rgb(216, 216, 216);
+    border: 1px solid rgba(19, 19, 19, 0.404);
     padding: 8px;
 }
   
 .table-data tr:nth-child(even){
-    background-color: #f2f2f2;
+    background-color: #707070;
+}
+
+.table-data tr:nth-child(odd){
+    background-color: #383838;
 }
   
 .table-data tr:hover {
-    background-color: #ddd;
+    background-color: rgb(107, 96, 96);
 }
   
 .table-data th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #269735;
+    background-color: #5ea566;
     color: white;
 }
 
@@ -316,9 +335,12 @@ li {
 .stat-card {
     margin: auto;
     margin-top: 10rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(80, 80, 80, 0.534);
     transition: 0.3s;
+    font-size: larger;
     width: 35%;
+    color: rgb(251, 251, 251);
+    background-color: rgba(0, 0, 0, 0.431);
 }
   
 .stat-card:hover {
@@ -328,7 +350,7 @@ li {
 .card-container {
     padding: 2px 16px;
     text-align: center;
-    color: rgb(95, 95, 95);
+    color: rgb(255, 255, 255);
 }
 
 .pricing-container {
@@ -343,23 +365,34 @@ li {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: left;
-    background-color: #f1f1f1;
-    width: 20%;
+    background-color: #00000063;
+    width: 25%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
 .pricing-card h2 {
-    color: rgb(50, 81, 144);
+    color: rgb(255, 255, 255);
+    font-size: 2.3rem
 }
 
 .pricing-card h3 {
-    color: rgb(61, 61, 61);
+    color: rgb(202, 202, 202);
+    text-shadow: 2px 2px black;
+    font-size: 1.8rem;
 }
 
 .pricing-card p {
-    color: rgb(124, 124, 124);
+    color: rgb(255, 255, 255);
+}
+
+.p-bg span {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    padding: 2px 2px;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 .user-login {
@@ -368,21 +401,13 @@ li {
     margin-right: 10px;
 }
 
-#image-div img {
-    height: 900px;
-    width: 1100px;
-}
-
-#login-div {
-    width: 100%;
-    margin-left: 50px;
-    margin-right: 50px;
-}
 
 .login-form {
-    background-color: rgba(93, 93, 93, 0.048);
-    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.664);
     border-radius: 20px;
+    margin: auto;
+    margin-top: 1rem;
+    width: 50%;
 }
 
 .login-form form {
@@ -392,8 +417,15 @@ li {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.have-acc {
+    text-decoration: underline;
+    color: white;
+}
+
+
+
 .login-form form label{
-    color: rgb(131, 131, 131);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
@@ -424,11 +456,11 @@ li {
 #signup-div {
     width: 40%;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .signup-form {
-    background-color: rgba(93, 93, 93, 0.048);
+    background-color: rgba(3, 3, 3, 0.774);
     border-radius: 20px;
 }
 
@@ -440,7 +472,7 @@ li {
 }
 
 .signup-form form label{
-    color: rgb(131, 131, 131);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
@@ -454,8 +486,8 @@ li {
     outline:none;
 }
 .signup-form form button {
-    padding: 10px;
-    width: 20%;
+    padding: 11px;
+    width: 25%;
     font-size: 1.2rem;
     border-radius: 5px;
     background-color: rgb(32, 151, 72);
@@ -469,7 +501,10 @@ li {
 }
 
 .error-text {
-    color: red;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(255 0 0 / 77%);
+    text-shadow: 0px 1px rgb(245 0 0);
 }
 
 .contact-header {
@@ -480,15 +515,16 @@ li {
 }
 
 .contact-form-div p {
-    font-size: 30px;
-    margin-left: 1rem;
-    color: rgb(148, 148, 148);
+    font-size: 50px;
+    margin-left: 0.7rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 .about-div {
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 6rem;
     display: flex;
 }
 .contact-form-div {
@@ -505,7 +541,7 @@ li {
 
 .contact-form label {
     font-size: 1.8rem;
-    color: rgb(105, 104, 104);
+    color: rgb(255, 255, 255);
 }
 
 .contact-form input {
@@ -513,8 +549,8 @@ li {
     height: 3rem;
     border-radius: 5px;
     font-size: medium;
-    border: none;
-    background-color: rgba(211, 211, 211, 0.246);
+    border: 1px solid rgba(0, 0, 0, 0.157);
+    background-color: rgba(211, 211, 211, 0.671);
     margin-bottom: 1rem;
 }
 
@@ -523,8 +559,9 @@ li {
 }
 
 .contact-form small {
-    color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
     font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.322);
 }
 
 #message{
@@ -534,7 +571,8 @@ li {
     border: none;
     font-size: large;
     vertical-align: middle;
-    background-color: rgba(211, 211, 211, 0.246);
+    border: 1px solid rgba(0, 0, 0, 0.157);
+    background-color: rgba(211, 211, 211, 0.671);
 }
 
 #message:focus {
@@ -543,11 +581,163 @@ li {
 
 #contact-btn {
     margin-top: 30px;
-    padding: 10px;
+    padding: 15px;
     width: 20%;
     font-size: 1.2rem;
-    border-radius: 5px;
-    background-color: rgb(56, 91, 168);
+    border-radius: 8px;
+    background-color: rgb(187, 43, 43);
     color: white;
     border: none;
+}
+
+.reserve-container {
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 30px;
+    margin: auto;
+    height: 800px;
+    margin-top: 2rem;
+}
+
+.bg1
+{
+  /* The image used reserve */
+  background-image: url("../images/back3.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2
+{
+  /* The image used pricing */
+  background-image: url("../images/back1.jpg");
+
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.bg3
+{
+  /* The image used contact */
+  background-image: url("../images/back5.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg4
+{
+  /* The image used */
+  background-image: url("../images/back2.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg5
+{
+  /* The image used signup */
+  background-image: url("../images/back6.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg6 {
+
+    /* The image used admin_login */
+    background-image: url("../images/back4.jpg");
+
+    /* Full height */
+    min-height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.bg7 {
+    /* The image used login */
+  background-image: url("../images/back7.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg8 {
+    /* The image used admin_login */
+    background-image: url("../images/back8.jpg");
+
+    /* Full height */
+    min-height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#landing-header {
+    margin-top: 4rem;
+    font-size: 4.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.para {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0 200px;
+    color: rgb(255, 255, 255);
+}
+
+#redir-conta {
+    width: 10%;
+    padding: 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#redir-conta:focus {
+    outline:none;
 }

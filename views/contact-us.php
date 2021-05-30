@@ -9,17 +9,17 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="bg3">
     <section class="header-section">
         <?php include '../templates/header.php' ?>
     </section>
     <section class="content-section">
+        <h1 class="main-header">Contact Us</h1>
         <div class="about-div">
             <div class="map-div">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798511757687!2d79.97039103434682!3d6.914677495003806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sSri%20Lanka%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2slk!4v1622264976599!5m2!1sen!2slk" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798511757687!2d79.97039103434682!3d6.914677495003806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sSri%20Lanka%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2slk!4v1622264976599!5m2!1sen!2slk" width="1100" height="800" style="border:10;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="contact-form-div">
-                <h1 class="contact-header">Contact Us</h1>
                 <p>If you have questions or just want to get in touch, use the form below, We look forward to hearing from you </p>
                 <div>
                     <form action="" method="post" class="contact-form">

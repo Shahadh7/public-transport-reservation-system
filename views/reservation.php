@@ -8,12 +8,15 @@
     <title>Reservation</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="bg1">
     <section class="header-section">
         <?php include '../templates/header.php' ?>
     </section>
     <section class="content-section">
-        reservation
+        <h1 class="main-header">Reserve Seats</h1>
+        <div class="reserve-container">
+            <h1>sadd</h1>
+        </div>
     </section>
     <section class="footer-section">
         <?php include '../templates/footer.php' ?>

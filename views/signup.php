@@ -8,7 +8,7 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="bg5">
     <section class="header-section">
         <?php include '../templates/header.php' ?>
     </section>
@@ -27,7 +27,6 @@
                     <input type="password" name="password" id="password" onkeyup="passVal()">
                     <span id="password-error" class="error-text"></span>
                     <button type="submit" onclick="signup()" style=" margin-right:20px;">Sign up</button>
-                    
                 </form>
             </div>
         </div>
