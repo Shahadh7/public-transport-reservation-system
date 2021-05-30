@@ -253,23 +253,24 @@ li {
 }
   
 .popup-modal-content {
-    background-color: #fefefe;
+    background-color: #000000c7;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid rgb(27, 27, 27);
     width: 40%;
+    border-radius: 10px;
 }
   
 
 .close {
-    color: #aaaaaa;
+    color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
   
 .close:hover, .close:focus {
-    color: #000;
+    color: rgb(83, 83, 83);
     text-decoration: none;
     cursor: pointer;
 }
@@ -278,7 +279,7 @@ li {
 .edit-div h1 {
     text-align: center;
     font-size: 2rem;
-    color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
 }
 .edit-div form {
     display: flex;
@@ -287,7 +288,7 @@ li {
     padding-left: 2rem;
 }
 .edit-div form label{
-    color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     margin-bottom: 5px;
 }
