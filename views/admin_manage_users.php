@@ -22,13 +22,15 @@
                 <h1> Manage Users</h1>
                 <div class="div-container">
                     <div class="search-div">
-                        <input type="search" name="search" id="search-users" placeholder="Search users by name" onkeyup="searchUser()">
+                        <input type="search" name="search" id="search-users" placeholder="Search users by name" onkeyup="searchUser()" ex>
                     </div>    
                     <table class="table-data" id="admin-table-users">
                         <thead>
                             <tr>
                                 <th>Username</th>
                                 <th>NIC</th>
+                                <th>Email</th>
+                                <th>Phone</th>
                                 <th>Operations</th>
                             </tr>
                         </thead>

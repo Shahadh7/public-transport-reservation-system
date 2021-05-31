@@ -84,6 +84,8 @@ function getAllUsers() {
                 output += "<tr id="+`${i}`+">"+
                 "<td class='row-data'>"+json_array[i].username+"</td>"+
                 "<td class='row-data'>"+json_array[i].nic+"</td>"+
+                "<td class='row-data'>"+json_array[i].email+"</td>"+
+                "<td class='row-data'>"+json_array[i].phone+"</td>"+
                 "<td>"+"<img"+" src="+"'../images/pencil.png'"+ "alt="+"'edit-icon'"+" class="+"'operation-icons'"+"onclick="+"'editItem("+`${json_array[i].user_id}`+")'"+""+" >"+
                 "<img"+" src="+"'../images/delete.png'"+ "alt="+"'delete-icon'"+" class="+"'operation-icons'"+"onclick="+"'deleteItem("+`${json_array[i].user_id}`+")'"+""+">"+"</td>"
                 +"</tr>";
