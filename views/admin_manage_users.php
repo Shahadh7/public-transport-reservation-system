@@ -46,9 +46,17 @@
                         <h1>Edit User</h1>
                         <form action="" id="users-edit">
                             <label for="username">Username</label>
-                            <input type="text" name="username" id="username">
+                            <input type="text" name="username" id="username" onkeyup="usernameVal()">
+                            <span id="username-error" class="error-text"></span>
                             <label for="user-nic">NIC</label>
-                            <input type="text" name="user-nic" id="user-nic">
+                            <input type="text" name="user-nic" id="user-nic" onkeyup="nicVal()">
+                            <span id="nic-error" class="error-text"></span>
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" onkeyup="emailVal()">
+                            <span id="email-error" class="error-text"></span>
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" id="phone" onkeyup="phoneVal()">
+                            <span id="phone-error" class="error-text"></span>
                             <button type="submit" onclick="updateEditedValues()">Update</button>
                         </form>
                     </div>

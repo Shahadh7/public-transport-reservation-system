@@ -10,6 +10,8 @@
 </head>
 <body class="bg6">
     <section class="header-section">
+        <?php include '../templates/admin-header.php' ?>
+    </section>
     <section class="content-section">
         <h1 class="main-header">Admin Login</h1>
         <div class="login-panel">

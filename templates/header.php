@@ -9,10 +9,8 @@
     <li><a href="../views/contact-us.php" class="nav-links">Contact Us</a></li>
     <li><a href="../views/pricing.php" class="nav-links">Pricing</a></li>
     <?php if (!isset($_SESSION['user_id'])) {?>
-        <li><a href="../views/reservation.php" class="nav-links">Reservation</a></li>
-        <li><a href="../views/admin_login.php" class="nav-links">Admin</a></li>
         <li><a href="../views/signup.php" class="nav-links">Sign up</a></li>
-        <li><a href="../views/login.php" class="nav-links">Login</a></li>
+        <li><a href="../views/login.php" class="nav-links">Sign in</a></li>
     <?php }?>
     
     <?php if (isset($_SESSION['user_id'])) {?>
