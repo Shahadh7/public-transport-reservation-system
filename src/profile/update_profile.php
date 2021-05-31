@@ -8,6 +8,14 @@
     $phone = $_POST['phone'];
     $password = $_POST['password'];
 
+    if($phone == "") {
+        $phone = NULL;
+    }
+
+    if($email == "") {
+        $email = NULL;
+    }
+
     if(isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
         if($password != "") {

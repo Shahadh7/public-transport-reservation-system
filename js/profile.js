@@ -105,7 +105,6 @@ function changeUserData() {
         var username = document.getElementById('username').value;
         var email = document.getElementById('email').value;
         var phone = document.getElementById('phone').value;
-        var new_pass = document.getElementById('new_password').value;
 
         var xhr = new XMLHttpRequest();
 
@@ -119,6 +118,8 @@ function changeUserData() {
             if(response == '"updated"') {
                 alert("Updated successfully!")
                 location.reload();
+            }else {
+                alert(response);
             }
         }
         xhr.send(data);
