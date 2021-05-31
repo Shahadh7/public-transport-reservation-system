@@ -14,6 +14,7 @@
     <?php }?>
     
     <?php if (isset($_SESSION['user_id'])) {?>
+        <li><a href="../views/user_profile.php" class="nav-links">Profile</a></li>
         <li><a href="../views/reservation.php" class="nav-links">Reservation</a></li>
     <?php }?>
 </ul>

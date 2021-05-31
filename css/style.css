@@ -478,7 +478,7 @@ li {
     margin-bottom: 5px;
 }
 .signup-form form input {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     padding: 15px;
     border-radius: 5px;
     border: none;
@@ -599,6 +599,57 @@ li {
     height: 800px;
     margin-top: 2rem;
 }
+
+.profile-container {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.753);
+    border-radius: 30px;
+    border: 1px solid rgb(41, 41, 41);
+    margin: auto;
+    height: 900px;
+}
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.profile-container input {
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 15px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+}
+.profile-container input:focus {
+    outline: none;
+}
+
+.profile-container label {
+    margin-left: 8.7rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.profile-container button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    background-color: rgb(63, 177, 68);
+    color: white;
+    border: none;
+    margin-left: 8.7rem;
+}
+
+.profile-container button:focus {
+    outline: none;
+}
+
 
 .bg1
 {
@@ -725,6 +776,14 @@ li {
     text-align: center;
     padding: 0 200px;
     color: rgb(255, 255, 255);
+}
+
+.error-text-prof {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(255 0 0 / 77%);
+    margin-left: 8.7rem;
+    text-shadow: 0px 1px rgb(245 0 0);
 }
 
 #redir-conta {

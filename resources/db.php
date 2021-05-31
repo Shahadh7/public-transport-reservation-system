@@ -475,6 +475,93 @@ class Db
         }
         return "succes";
     }
+
+    public function getUserData($user_id) {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT username,user_id,email,phone,nic 
+                      FROM users
+                      WHERE user_id = ?";
+
+            $SQL = $db->prepare($query);
+            $SQL->bindParam(1,$user_id);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function checkOldPass($old_pass) {
+        try
+        {
+            $db = $this->dbConnect();
+            $query = "SELECT user_id 
+                      FROM users
+                      WHERE password = ?";
+
+            $SQL = $db->prepare($query);
+            $SQL->bindParam(1,$old_pass);
+            $SQL->execute();
+            $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
+            if(sizeof($result) == 1) {
+                return "true";
+            }
+            else {
+                return "false";
+            }
+        }catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        return $result;
+    }
+
+    public function updateUserDataWithNewPassword($username,$password,$email,$phone,$user_id) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("UPDATE users SET username = :username , email = :email , phone = :phone , password = :password WHERE user_id = :user_id ");
+            $SQL->bindParam(":username",$username);
+            $SQL->bindParam(":email",$email);
+            $SQL->bindParam(":phone",$phone);
+            $SQL->bindParam(":password",$password);
+            $SQL->bindParam(":user_id",$user_id);
+            $SQL->execute();
+            return "updated"; 
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function updateUserDataWithoutNewPassword($username,$email,$phone,$user_id) {
+        try{
+            $db = $this->dbConnect();
+            $SQL = $db->prepare("UPDATE users SET username = :username , email = :email , phone = :phone WHERE user_id = :user_id ");
+            $SQL->bindParam(":username",$username);
+            $SQL->bindParam(":email",$email);
+            $SQL->bindParam(":phone",$phone);
+            $SQL->bindParam(":user_id",$user_id);
+            $SQL->execute();
+            return "updated"; 
+        } catch (PDOException $e) {
+            echo 'Error Message: ' . $e->getMessage() . "<BR>";
+            echo 'Exception Caught on line: ' . $e->getLine() . "<BR>";
+        } catch (Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
 }
 
 ?>
