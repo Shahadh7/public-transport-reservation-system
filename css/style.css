@@ -1,0 +1,803 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.content-section {
+    min-height: 100vh;
+    margin-bottom: 4rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.692);
+}
+
+li {
+    float: right;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 21px 16px;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+
+#logo {
+    margin-left: 20px;
+    float: left;
+    color: white;
+}
+
+#logo a {
+    display: block;
+    font-size: 1.3rem;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.row-data {
+    color: white;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+    text-align: center;
+}
+
+.main-header {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #464444;
+}
+
+.login-panel {
+    margin: auto;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.356);
+    border-radius: 25px;
+}
+
+
+.login-panel form {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+}
+.login-panel form label{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.login-panel form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.login-panel form input:focus {
+    outline:none;
+}
+.login-panel form button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(63, 177, 68);
+    color: white;
+    border: none;
+}
+
+.login-panel form button:focus {
+    outline:none;
+
+}
+
+.admin-content-section {
+    display: flex;
+    min-height: 100vh;
+}
+.side-bar {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.content-view {
+    flex-grow: 9;
+}
+
+.side-menu-item {
+    flex-direction: column;
+    color: whitesmoke;
+    text-align: center;
+    align-self: flex-end;
+    font-size: 1.5em;
+    height: 5rem;
+    vertical-align: middle;
+    border-bottom: 1px black solid;
+}
+
+.side-menu-item:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+.side-menu-item a {
+    line-height: 3.5;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.content-view  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(248, 248, 248);
+    width: 50rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.div-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+
+.table-data {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.table-data td, .table-data th {
+    border: 1px solid rgba(19, 19, 19, 0.404);
+    padding: 8px;
+}
+  
+.table-data tr:nth-child(even){
+    background-color: #707070;
+}
+
+.table-data tr:nth-child(odd){
+    background-color: #383838;
+}
+  
+.table-data tr:hover {
+    background-color: rgb(107, 96, 96);
+}
+  
+.table-data th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2c4e97;
+    color: white;
+}
+
+.operation-icons {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-div {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+#search-users {
+    float: left;
+    width: 12rem;
+    height: 2rem;
+    text-align: center;
+}
+
+
+.add-new-btn {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 10%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(63, 177, 68);
+    color: white;
+    border: none;
+}
+
+.add-new-btn:focus {
+    outline:none;
+
+}
+
+
+
+.popup-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+.popup-modal-content {
+    background-color: #000000c7;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(27, 27, 27);
+    width: 40%;
+    border-radius: 10px;
+}
+  
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: rgb(83, 83, 83);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.edit-div h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+.edit-div form {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.edit-div form label{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.edit-div form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+}
+.edit-div form input:focus {
+    outline:none;
+}
+.edit-div form button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(63, 135, 177);
+    color: white;
+    border: none;
+}
+
+.edit-div form button:focus {
+    outline:none;
+
+}
+
+.edit-div form select {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+}
+.edit-div form select:focus {
+    outline:none;
+}
+
+.admin-statistics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    margin: auto;
+    margin-top: 10rem;
+    box-shadow: 0 4px 8px 0 rgba(80, 80, 80, 0.534);
+    transition: 0.3s;
+    font-size: larger;
+    width: 35%;
+    color: rgb(251, 251, 251);
+    background-color: rgba(0, 0, 0, 0.431);
+}
+  
+.stat-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+.card-container {
+    padding: 2px 16px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.pricing-container {
+    margin: auto;
+    margin-top: 3rem;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    background-color: #00000063;
+    width: 25%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.pricing-card h2 {
+    color: rgb(255, 255, 255);
+    font-size: 2.3rem
+}
+
+.pricing-card h3 {
+    color: rgb(202, 202, 202);
+    text-shadow: 2px 2px black;
+    font-size: 1.8rem;
+}
+
+.pricing-card p {
+    color: rgb(255, 255, 255);
+}
+
+.p-bg span {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    padding: 2px 2px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.user-login {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.664);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 1rem;
+    width: 50%;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.have-acc {
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+.login-form form label{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.login-form form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.login-form form input:focus {
+    outline:none;
+}
+.login-form form button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(32, 151, 72);
+    color: white;
+    border: none;
+}
+
+.login-form form button:focus {
+    outline:none;
+
+}
+
+#signup-div {
+    width: 40%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.signup-form {
+    background-color: rgba(3, 3, 3, 0.774);
+    border-radius: 20px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.signup-form form label{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.signup-form form input {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+.signup-form form input:focus {
+    outline:none;
+}
+.signup-form form button {
+    padding: 11px;
+    width: 25%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(32, 151, 72);
+    color: white;
+    border: none;
+}
+
+.signup-form form button:focus {
+    outline:none;
+
+}
+
+.error-text {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(255 0 0 / 77%);
+    text-shadow: 0px 1px rgb(245 0 0);
+}
+
+.contact-header {
+    margin-left: 1rem;
+    text-align: left;
+    font-size: 3rem;
+    color: rgb(77, 77, 77);
+}
+
+.contact-form-div p {
+    font-size: 50px;
+    margin-left: 0.7rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.about-div {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+}
+.contact-form-div {
+    width: 100%;
+}
+
+.contact-form {
+    margin-left: 1rem;
+    margin-top: 3rem;
+    color: rgb(105, 104, 104);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+}
+
+.contact-form input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: medium;
+    border: 1px solid rgba(0, 0, 0, 0.157);
+    background-color: rgba(211, 211, 211, 0.671);
+    margin-bottom: 1rem;
+}
+
+.contact-form input:focus {
+    outline:none;
+}
+
+.contact-form small {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+#message{
+    width: 100%;
+    border-radius: 5px;
+    height: 8rem;
+    border: none;
+    font-size: large;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.157);
+    background-color: rgba(211, 211, 211, 0.671);
+}
+
+#message:focus {
+    outline:none;
+}
+
+#contact-btn {
+    margin-top: 30px;
+    padding: 15px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: rgb(187, 43, 43);
+    color: white;
+    border: none;
+}
+
+.reserve-container {
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 30px;
+    margin: auto;
+    height: 800px;
+    margin-top: 2rem;
+}
+
+.profile-container {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.753);
+    border-radius: 30px;
+    border: 1px solid rgb(41, 41, 41);
+    margin: auto;
+    height: 900px;
+}
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.profile-container input {
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 15px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+}
+.profile-container input:focus {
+    outline: none;
+}
+
+.profile-container label {
+    margin-left: 8.7rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.profile-container button {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    background-color: rgb(63, 177, 68);
+    color: white;
+    border: none;
+    margin-left: 8.7rem;
+}
+
+.profile-container button:focus {
+    outline: none;
+}
+
+
+.bg1
+{
+  /* The image used reserve */
+  background-image: url("../images/back3.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2
+{
+  /* The image used pricing */
+  background-image: url("../images/back1.jpg");
+
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.bg3
+{
+  /* The image used contact */
+  background-image: url("../images/back5.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg4
+{
+  /* The image used */
+  background-image: url("../images/back2.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg5
+{
+  /* The image used signup */
+  background-image: url("../images/back6.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg6 {
+
+    /* The image used admin_login */
+    background-image: url("../images/back4.jpg");
+
+    /* Full height */
+    min-height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.bg7 {
+    /* The image used login */
+  background-image: url("../images/back7.jpg");
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg8 {
+    /* The image used admin_login */
+    background-image: url("../images/back8.jpg");
+
+    /* Full height */
+    min-height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#landing-header {
+    margin-top: 4rem;
+    font-size: 4.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.para {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0 200px;
+    color: rgb(255, 255, 255);
+}
+
+.error-text-prof {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(255 0 0 / 77%);
+    margin-left: 8.7rem;
+    text-shadow: 0px 1px rgb(245 0 0);
+}
+
+#redir-conta {
+    width: 10%;
+    padding: 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#redir-conta:focus {
+    outline:none;
+}
