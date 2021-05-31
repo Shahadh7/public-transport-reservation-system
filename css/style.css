@@ -653,13 +653,8 @@ li {
 
 .bg1
 {
-  /* The image used reserve */
   background-image: url("../images/back3.jpg");
-
-  /* Full height */
   min-height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -667,12 +662,8 @@ li {
 
 .bg2
 {
-  /* The image used pricing */
   background-image: url("../images/back1.jpg");
-
   width: 100%;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
@@ -680,13 +671,8 @@ li {
 
 .bg3
 {
-  /* The image used contact */
   background-image: url("../images/back5.jpg");
-
-  /* Full height */
   min-height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -694,13 +680,8 @@ li {
 
 .bg4
 {
-  /* The image used */
   background-image: url("../images/back2.jpg");
-
-  /* Full height */
   min-height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -708,27 +689,16 @@ li {
 
 .bg5
 {
-  /* The image used signup */
   background-image: url("../images/back6.jpg");
-
-  /* Full height */
   min-height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bg6 {
-
-    /* The image used admin_login */
     background-image: url("../images/back4.jpg");
-
-    /* Full height */
     min-height: 100vh;
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -736,26 +706,16 @@ li {
 }
 
 .bg7 {
-    /* The image used login */
   background-image: url("../images/back7.jpg");
-
-  /* Full height */
   min-height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bg8 {
-    /* The image used admin_login */
     background-image: url("../images/back8.jpg");
-
-    /* Full height */
     min-height: 100vh;
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
