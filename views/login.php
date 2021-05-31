@@ -22,7 +22,7 @@
                         <input type="password" name="password" id="password">
                         <div style=" display:flex;">
                             <button type="submit" onclick="login()" style=" margin-right:20px;">login</button>
-                            <p><a class="have-acc" href="../views/register.php">Don't have an account? Get Started</a></p>
+                            <p><a class="have-acc" href="../views/signup.php">Don't have an account? Get Started</a></p>
                         </div>
                     </form>
                 </div>
