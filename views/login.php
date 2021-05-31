@@ -12,7 +12,7 @@
             <?php include '../templates/header.php' ?>
         </section>
         <section class="content-section">
-        <h1 class="main-header">Sign Up</h1>
+        <h1 class="main-header">Sign In</h1>
             <div class="user-login">
                 <div class="login-form">
                     <form action="" method="post">
