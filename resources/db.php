@@ -117,7 +117,7 @@ class Db
         try{
             $searchText = "%".$text."%";
             $db = $this->dbConnect();
-            $SQL = $db->prepare("SELECT username,nic,user_id FROM users WHERE username LIKE ? ");
+            $SQL = $db->prepare("SELECT username,nic,user_id,email,phone FROM users WHERE username LIKE ? ");
             $SQL->bindParam(1,$searchText);
             $SQL->execute();
             $result = $SQL->fetchAll(PDO::FETCH_ASSOC);
@@ -130,14 +130,16 @@ class Db
         return $result;
     }
 
-    public function updateUser($userId,$username,$nic)
+    public function updateUser($userId,$username,$nic,$email,$phone)
     {
         try{
             $db = $this->dbConnect();
-            $SQL = $db->prepare("UPDATE users SET username = :username , nic = :nic WHERE user_id = :userId ");
+            $SQL = $db->prepare("UPDATE users SET username = :username , nic = :nic , email = :email , phone = :phone WHERE user_id = :userId ");
             $SQL->bindParam(":username",$username);
             $SQL->bindParam(":nic",$nic);
-            $SQL->bindParam(":userId",$userId);
+            $SQL->bindParam(":email",$email);
+            $SQL->bindParam(":phone",$phone);
+            $SQL->bindParam(":userId",$userId); 
             $SQL->execute();
             return "updated"; 
         } catch (PDOException $e) {
